@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Profile Report </title>
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- d3 java script -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h2>Amazon Fraud Detector CSV Profile</h2>
+    <hr>
+</div>
+
+    
+
+<div class="container"> 
+    <h5><span class="badge badge-secondary">Overview</span></h5>
+    <div class="alert alert-info"> 
+      ../data/registration_data_20K_full.csv
+    </div>
+    <table class="table table-striped">
+        <tbody>
+        
+            
+                <tr>
+                  <td>Record count</td>
+                  <td>20,000</td>
+                </tr>
+            
+        
+            
+                <tr>
+                  <td>Column count</td>
+                  <td>9</td>
+                </tr>
+            
+        
+            
+                <tr>
+                  <td>Duplicate count</td>
+                  <td>0</td>
+                </tr>
+            
+        
+            
+                <tr>
+                  <td>Memory size</td>
+                  <td>1.37 MB</td>
+                </tr>
+            
+        
+            
+                <tr>
+                  <td>Record size</td>
+                  <td>72.01 bytes</td>
+                </tr>
+            
+        
+            
+                <tr>
+                  <td>Date range</td>
+                  <td>2019-07-15 to 2020-07-14</td>
+                </tr>
+            
+        
+            
+                <tr>
+                  <td>Day count</td>
+                  <td>365 days</td>
+                </tr>
+            
+        
+            
+        
+            
+        
+        </tbody>
+      </table>
+      
+    </div>
+</div>
+
+    
+<small>
+<div class="container"> 
+  <h5><span class="badge badge-secondary">Field Summary</span></h5>
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Feature</th>
+              <th scope="col">Count</th>
+              <th scope="col"># Distinct</th>
+              <th scope="col">% Distinct</th>
+              <th scope="col"># Missing</th>
+              <th scope="col">% Missing</th>    
+            </tr>
+          </thead>
+          <tbody>
+          
+              <tr>
+              <td>ip_address</td>
+              <td>object</td>
+              <td>IP_ADDRESS</td>
+              <td>20000</td>
+              <td>3021</td>
+              <td>           15.10%</td>
+              <td>0</td>
+              <td>            0.00%</td>
+              </tr>
+          
+              <tr>
+              <td>email_address</td>
+              <td>object</td>
+              <td>EMAIL_ADDRESS</td>
+              <td>20000</td>
+              <td>3489</td>
+              <td>           17.44%</td>
+              <td>0</td>
+              <td>            0.00%</td>
+              </tr>
+          
+              <tr>
+              <td>billing_state</td>
+              <td>object</td>
+              <td>categorical</td>
+              <td>20000</td>
+              <td>46</td>
+              <td>            0.23%</td>
+              <td>0</td>
+              <td>            0.00%</td>
+              </tr>
+          
+              <tr>
+              <td>user_agent</td>
+              <td>object</td>
+              <td>categorical</td>
+              <td>20000</td>
+              <td>2981</td>
+              <td>           14.90%</td>
+              <td>0</td>
+              <td>            0.00%</td>
+              </tr>
+          
+              <tr>
+              <td>billing_postal</td>
+              <td>int64</td>
+              <td>numeric</td>
+              <td>20000</td>
+              <td>1543</td>
+              <td>            7.72%</td>
+              <td>0</td>
+              <td>            0.00%</td>
+              </tr>
+          
+              <tr>
+              <td>phone_number</td>
+              <td>object</td>
+              <td>categorical</td>
+              <td>20000</td>
+              <td>3504</td>
+              <td>           17.52%</td>
+              <td>0</td>
+              <td>            0.00%</td>
+              </tr>
+          
+              <tr>
+              <td>EVENT_TIMESTAMP</td>
+              <td>datetime64[ns]</td>
+              <td>EVENT_TIMESTAMP</td>
+              <td>20000</td>
+              <td>19997</td>
+              <td>           99.98%</td>
+              <td>0</td>
+              <td>            0.00%</td>
+              </tr>
+          
+              <tr>
+              <td>EVENT_LABEL</td>
+              <td>object</td>
+              <td>EVENT_LABEL</td>
+              <td>20000</td>
+              <td>2</td>
+              <td>            0.01%</td>
+              <td>0</td>
+              <td>            0.00%</td>
+              </tr>
+          
+          </tbody>
+      </table>
+  </div>
+</div>
+</small>
+<small>
+<div class="container"> 
+    <h5><span class="badge badge-secondary">Field Warnings </span></h5>
+    <div class="alert alert-warning">
+        The following <b>1</b> fields may cause potential issues, check the message and consider excluding them from model training   
+      </div>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Feature</th>
+                <th scope="col">Count</th>
+                <th scope="col"># Distinct</th>
+                <th scope="col">% Distinct</th>
+                <th scope="col"># Missing</th>
+                <th scope="col">% Missing</th>
+                <th scope="col">Message</th>
+              </tr>
+            </thead>
+            <tbody>
+            
+                <tr>
+                <td>billing_address</td>
+                <td>object</td>
+                <td>exclude</td>
+                <td>20000</td>
+                <td>20000</td>
+                <td>          100.00%</td>
+                <td>0</td>
+                <td>            0.00%</td>
+                <td>(100.00%) unique</td>
+                </tr>
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+</small>
+
+    
+<br>
+<div class="container"> 
+  <h3>Data & Label Maturity</h3>
+  <hr>
+    <div class="alert alert-info">
+      <p>
+        AWS Fraud Detector models require a minimum of 500 observations labeled as “fraud”. As part of the data gathering process it is important to ensure that records have had sufficient time to “mature”, i.e. that enough time has passed to insure “non-fraud" and  “fraud” records have been correctly identified.   
+      </p>
+        <i>Note: It can often take 30 - 45 days (or more) to correctly identify fraudulent events.</i>
+    </div>
+
+    <div class="container">
+    	<div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-6">
+                  <p>Label Field</p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right"><b> EVENT_LABEL</b></p>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                      <p style="margin-left:20px;""> Data Type </p>
+                    </div>
+                    <div class="col-6">
+                          <p class="text-right">int64</p>
+                    </div>
+                    </div>
+                <div class="row">
+                    <div class="col-6">
+                      <p style="margin-left:20px;"">Labels </p>
+                    </div>
+                    <div class="col-6">
+                          <p class="text-right">fraud - (fraud),  legit - (legit)</p>
+                    </div>
+                    </div>
+                <div class="row">
+                <div class="col-6">
+            <p style="margin-left:20px;"">Fraud rate</p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right">5.04%</p>
+                </div>
+          </div>
+          <div class="row">
+              <div class="col-6">
+                <p style="margin-left:20px;"">Fraud count</p>
+              </div>
+              <div class="col-6">
+                    <p class="text-right">1009</p>
+              </div>
+              </div>
+                
+          <div class="row">
+              <div class="col-6">
+                <p style="margin-left:20px;""> Legitimate rate </p>
+              </div>
+              <div class="col-6">
+                    <p class="text-right"> 94.95%</p>
+              </div>
+              </div>
+              <div class="row">
+                  <div class="col-6">
+                    <p style="margin-left:20px;""> Legitimate count </p>
+                  </div>
+                  <div class="col-6">
+                        <p class="text-right"> 18991</p>
+                  </div>
+                  </div>
+                <div class="row">
+                <div class="col-6">
+                    <p style="margin-left:20px;"">Missing count </p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right">0</p>
+                </div>
+          </div>
+          <div class="row">
+              <div class="col-6">
+                <p style="margin-left:20px;"">Missing pct </p>
+              </div>
+              <div class="col-6">
+                    <p class="text-right">0.00%</p>
+              </div>
+              </div>
+    </div>
+    <div class="col-6">
+        <canvas id="myChart" width="400" height="300"></canvas>
+            <script>
+            var ctx = document.getElementById('myChart');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Not-Fraud', 'Fraud', 'Missing'],
+                    datasets: [{
+                        label: 'Label Distribution',
+                        data: [94.95, 5.04, 0.00],
+                        backgroundColor: [
+            "#1975BA",
+                            '#689B0C',
+                            '#f1f1f1'
+                        ],
+                        borderColor: [
+              "#1975BA",
+                            '#689B0C',
+                            '#f1f1f1'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: { legend: {
+                            display: false
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                max: 100,
+                                min: 0,
+                                stepSize: 10
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+    </div>
+    </div>
+</div>
+
+
+</div>
+
+
+    
+
+<div class="container"> 
+    <canvas id="partChart" width="800" height="200"></canvas>
+    
+    <script>
+                var ctx = document.getElementById('partChart');
+                
+				var data1 = [3, 2, 4, 3, 4, 2, 4, 3, 4, 2, 3, 4, 2, 8, 6, 1, 4, 3, 5, 4, 5, 4, 3, 3, 3, 2, 3, 3, 1, 1, 1, 3, 4, 2, 1, 4, 1, 6, 2, 0, 3, 4, 1, 2, 1, 8, 2, 5, 4, 0, 2, 0, 2, 1, 3, 2, 5, 2, 2, 3, 1, 0, 5, 1, 3, 3, 3, 3, 5, 6, 3, 4, 2, 3, 2, 3, 5, 3, 0, 2, 0, 3, 2, 3, 6, 7, 3, 1, 5, 2, 2, 2, 4, 5, 2, 2, 1, 6, 4, 3, 2, 0, 4, 5, 2, 0, 2, 5, 2, 1, 5, 3, 1, 3, 1, 3, 3, 3, 2, 2, 6, 2, 5, 1, 2, 0, 3, 6, 1, 2, 3, 6, 5, 3, 1, 2, 4, 2, 3, 5, 2, 1, 1, 1, 6, 2, 0, 3, 4, 2, 2, 0, 2, 1, 3, 0, 3, 6, 2, 2, 2, 2, 2, 6, 4, 4, 2, 3, 5, 2, 3, 5, 1, 4, 1, 7, 2, 4, 2, 2, 5, 4, 6, 4, 2, 2, 3, 2, 3, 7, 5, 1, 2, 1, 2, 1, 3, 2, 6, 1, 1, 2, 1, 3, 1, 0, 3, 2, 3, 1, 3, 3, 3, 3, 2, 3, 0, 2, 1, 0, 3, 2, 2, 3, 2, 1, 2, 2, 6, 2, 0, 2, 5, 2, 4, 0, 1, 5, 5, 2, 1, 1, 1, 2, 1, 2, 3, 5, 3, 6, 1, 3, 3, 4, 2, 5, 2, 5, 2, 4, 5, 2, 3, 2, 5, 1, 2, 3, 2, 2, 1, 2, 2, 4, 3, 4, 2, 4, 2, 1, 1, 1, 4, 1, 3, 3, 2, 3, 2, 3, 3, 1, 2, 4, 3, 1, 3, 1, 3, 4, 3, 2, 4, 5, 2, 3, 0, 3, 3, 3, 1, 1, 3, 4, 2, 3, 0, 1, 2, 2, 5, 1, 5, 5, 3, 2, 6, 1, 1, 4, 3, 4, 4, 0, 4, 3, 4, 4, 4, 2, 4, 2, 4, 1, 5, 1, 6, 2, 3, 1, 3, 1, 4, 5, 7, 4, 1, 3, 3, 3, 5, 4, 1, 1, 2, 3];
+				var data0 = [27, 65, 58, 54, 46, 55, 47, 58, 53, 46, 53, 44, 49, 55, 48, 56, 58, 65, 44, 51, 59, 53, 55, 50, 55, 55, 40, 63, 60, 50, 53, 62, 52, 56, 55, 59, 55, 51, 44, 44, 44, 52, 56, 56, 55, 57, 48, 49, 45, 48, 56, 53, 43, 55, 55, 51, 53, 61, 50, 55, 55, 46, 64, 51, 49, 48, 51, 58, 55, 46, 49, 49, 40, 53, 43, 58, 60, 52, 54, 49, 45, 52, 50, 46, 56, 50, 47, 50, 62, 40, 56, 60, 50, 48, 51, 54, 51, 57, 53, 58, 47, 42, 62, 49, 55, 59, 55, 54, 55, 43, 36, 40, 48, 46, 46, 44, 50, 45, 64, 47, 52, 58, 48, 50, 60, 48, 58, 58, 63, 60, 55, 49, 53, 56, 43, 46, 51, 50, 56, 45, 52, 60, 35, 55, 52, 61, 41, 59, 44, 53, 65, 50, 42, 54, 62, 57, 67, 49, 47, 42, 44, 46, 54, 52, 47, 52, 44, 41, 52, 45, 53, 47, 50, 60, 53, 49, 58, 40, 55, 49, 66, 48, 50, 40, 55, 61, 61, 43, 46, 52, 55, 45, 49, 45, 48, 66, 48, 53, 56, 56, 52, 45, 60, 47, 62, 43, 38, 47, 56, 47, 42, 59, 60, 50, 54, 48, 65, 46, 53, 43, 67, 64, 54, 51, 56, 52, 57, 67, 52, 50, 50, 54, 46, 47, 45, 37, 43, 50, 49, 65, 46, 48, 47, 48, 53, 52, 36, 44, 66, 50, 57, 43, 57, 71, 50, 52, 48, 52, 48, 59, 56, 47, 44, 55, 47, 59, 47, 51, 58, 57, 61, 47, 44, 49, 45, 58, 45, 61, 45, 57, 52, 55, 66, 37, 61, 47, 46, 48, 60, 57, 55, 65, 56, 57, 62, 56, 41, 53, 54, 68, 49, 56, 58, 40, 61, 56, 54, 47, 59, 65, 46, 47, 64, 51, 40, 47, 59, 60, 37, 54, 49, 54, 66, 63, 42, 50, 51, 51, 48, 36, 46, 58, 54, 47, 41, 60, 50, 53, 56, 66, 64, 45, 55, 50, 47, 44, 60, 52, 67, 60, 43, 51, 37, 40, 48, 62, 41, 46, 49, 62, 56, 59, 52, 62, 48, 33];
+                var dlabels =['2019-07-15', '2019-07-16', '2019-07-17', '2019-07-18', '2019-07-19', '2019-07-20', '2019-07-21', '2019-07-22', '2019-07-23', '2019-07-24', '2019-07-25', '2019-07-26', '2019-07-27', '2019-07-28', '2019-07-29', '2019-07-30', '2019-07-31', '2019-08-01', '2019-08-02', '2019-08-03', '2019-08-04', '2019-08-05', '2019-08-06', '2019-08-07', '2019-08-08', '2019-08-09', '2019-08-10', '2019-08-11', '2019-08-12', '2019-08-13', '2019-08-14', '2019-08-15', '2019-08-16', '2019-08-17', '2019-08-18', '2019-08-19', '2019-08-20', '2019-08-21', '2019-08-22', '2019-08-23', '2019-08-24', '2019-08-25', '2019-08-26', '2019-08-27', '2019-08-28', '2019-08-29', '2019-08-30', '2019-08-31', '2019-09-01', '2019-09-02', '2019-09-03', '2019-09-04', '2019-09-05', '2019-09-06', '2019-09-07', '2019-09-08', '2019-09-09', '2019-09-10', '2019-09-11', '2019-09-12', '2019-09-13', '2019-09-14', '2019-09-15', '2019-09-16', '2019-09-17', '2019-09-18', '2019-09-19', '2019-09-20', '2019-09-21', '2019-09-22', '2019-09-23', '2019-09-24', '2019-09-25', '2019-09-26', '2019-09-27', '2019-09-28', '2019-09-29', '2019-09-30', '2019-10-01', '2019-10-02', '2019-10-03', '2019-10-04', '2019-10-05', '2019-10-06', '2019-10-07', '2019-10-08', '2019-10-09', '2019-10-10', '2019-10-11', '2019-10-12', '2019-10-13', '2019-10-14', '2019-10-15', '2019-10-16', '2019-10-17', '2019-10-18', '2019-10-19', '2019-10-20', '2019-10-21', '2019-10-22', '2019-10-23', '2019-10-24', '2019-10-25', '2019-10-26', '2019-10-27', '2019-10-28', '2019-10-29', '2019-10-30', '2019-10-31', '2019-11-01', '2019-11-02', '2019-11-03', '2019-11-04', '2019-11-05', '2019-11-06', '2019-11-07', '2019-11-08', '2019-11-09', '2019-11-10', '2019-11-11', '2019-11-12', '2019-11-13', '2019-11-14', '2019-11-15', '2019-11-16', '2019-11-17', '2019-11-18', '2019-11-19', '2019-11-20', '2019-11-21', '2019-11-22', '2019-11-23', '2019-11-24', '2019-11-25', '2019-11-26', '2019-11-27', '2019-11-28', '2019-11-29', '2019-11-30', '2019-12-01', '2019-12-02', '2019-12-03', '2019-12-04', '2019-12-05', '2019-12-06', '2019-12-07', '2019-12-08', '2019-12-09', '2019-12-10', '2019-12-11', '2019-12-12', '2019-12-13', '2019-12-14', '2019-12-15', '2019-12-16', '2019-12-17', '2019-12-18', '2019-12-19', '2019-12-20', '2019-12-21', '2019-12-22', '2019-12-23', '2019-12-24', '2019-12-25', '2019-12-26', '2019-12-27', '2019-12-28', '2019-12-29', '2019-12-30', '2019-12-31', '2020-01-01', '2020-01-02', '2020-01-03', '2020-01-04', '2020-01-05', '2020-01-06', '2020-01-07', '2020-01-08', '2020-01-09', '2020-01-10', '2020-01-11', '2020-01-12', '2020-01-13', '2020-01-14', '2020-01-15', '2020-01-16', '2020-01-17', '2020-01-18', '2020-01-19', '2020-01-20', '2020-01-21', '2020-01-22', '2020-01-23', '2020-01-24', '2020-01-25', '2020-01-26', '2020-01-27', '2020-01-28', '2020-01-29', '2020-01-30', '2020-01-31', '2020-02-01', '2020-02-02', '2020-02-03', '2020-02-04', '2020-02-05', '2020-02-06', '2020-02-07', '2020-02-08', '2020-02-09', '2020-02-10', '2020-02-11', '2020-02-12', '2020-02-13', '2020-02-14', '2020-02-15', '2020-02-16', '2020-02-17', '2020-02-18', '2020-02-19', '2020-02-20', '2020-02-21', '2020-02-22', '2020-02-23', '2020-02-24', '2020-02-25', '2020-02-26', '2020-02-27', '2020-02-28', '2020-02-29', '2020-03-01', '2020-03-02', '2020-03-03', '2020-03-04', '2020-03-05', '2020-03-06', '2020-03-07', '2020-03-08', '2020-03-09', '2020-03-10', '2020-03-11', '2020-03-12', '2020-03-13', '2020-03-14', '2020-03-15', '2020-03-16', '2020-03-17', '2020-03-18', '2020-03-19', '2020-03-20', '2020-03-21', '2020-03-22', '2020-03-23', '2020-03-24', '2020-03-25', '2020-03-26', '2020-03-27', '2020-03-28', '2020-03-29', '2020-03-30', '2020-03-31', '2020-04-01', '2020-04-02', '2020-04-03', '2020-04-04', '2020-04-05', '2020-04-06', '2020-04-07', '2020-04-08', '2020-04-09', '2020-04-10', '2020-04-11', '2020-04-12', '2020-04-13', '2020-04-14', '2020-04-15', '2020-04-16', '2020-04-17', '2020-04-18', '2020-04-19', '2020-04-20', '2020-04-21', '2020-04-22', '2020-04-23', '2020-04-24', '2020-04-25', '2020-04-26', '2020-04-27', '2020-04-28', '2020-04-29', '2020-04-30', '2020-05-01', '2020-05-02', '2020-05-03', '2020-05-04', '2020-05-05', '2020-05-06', '2020-05-07', '2020-05-08', '2020-05-09', '2020-05-10', '2020-05-11', '2020-05-12', '2020-05-13', '2020-05-14', '2020-05-15', '2020-05-16', '2020-05-17', '2020-05-18', '2020-05-19', '2020-05-20', '2020-05-21', '2020-05-22', '2020-05-23', '2020-05-24', '2020-05-25', '2020-05-26', '2020-05-27', '2020-05-28', '2020-05-29', '2020-05-30', '2020-05-31', '2020-06-01', '2020-06-02', '2020-06-03', '2020-06-04', '2020-06-05', '2020-06-06', '2020-06-07', '2020-06-08', '2020-06-09', '2020-06-10', '2020-06-11', '2020-06-12', '2020-06-13', '2020-06-14', '2020-06-15', '2020-06-16', '2020-06-17', '2020-06-18', '2020-06-19', '2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14'] ;
+                
+				var myChart2 = new Chart(ctx, {
+                    type: 'bar',
+                    
+					data: {
+						labels: dlabels,
+						datasets: [{
+							label: 'Fraud ',
+                            data: data1,
+                            backgroundColor: "#689B0C",
+						              hoverBackgroundColor: "#D4E4B4",
+						    hoverBorderWidth: 1
+                        },
+                        {
+                          label: 'Not Fraud',
+                          data: data0,
+                                        backgroundColor: "#1975BA ",
+                                        hoverBackgroundColor: "#B5D3EA",
+                                        hoverBorderWidth: 1
+                        }]
+					},
+					options: {
+                        title: {
+                        display: true,
+                        text: 'Fraud Rate over Time'
+                        },
+                        legend: {
+                            display: false
+                        },
+						scales: {
+							xAxes: [{ 
+          						stacked: true, 
+								}],
+							yAxes: [{
+								stacked: true, 
+							}]
+						}
+					}
+				});
+				
+				</script>
+
+</div>
+
+    
+<div class="container"> 
+  <h4>Email Analysis</h4>
+  <hr>
+    <div class="alert alert-info">
+        AWS Fraud Detector performs the following checks on Email Address: 
+        <li> Email is in a valid format 64 characters (A-z,0-9,-,_, .) to left of the @ symbol, and up to 253 characters to the right. </li>
+        <li> Email contains less than 20% missing values </li>
+        <li> Email has more than 100 unique addresses </li>
+    </div>
+    <div class="container">
+    	<div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-6">
+                  <p>Email Field</p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right"><b> email_address</b></p>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                      <p style="margin-left:20px;"">Record count</p>
+                    </div>
+                    <div class="col-6">
+                          <p class="text-right">20,000</p>
+                    </div>
+                    </div>
+                <div class="row">
+                    <div class="col-6">
+                      <p style="margin-left:20px;"">Valid count</p>
+                    </div>
+                    <div class="col-6">
+                          <p class="text-right">20,000</p>
+                    </div>
+                    </div>
+                
+
+        <div class="row">
+                <div class="col-6">
+            <p style="margin-left:20px;"">Invalid count</p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right">0</p>
+        </div>
+          </div>
+          <div class="row">
+              <div class="col-6">
+                <p style="margin-left:20px;"">Missing count</p>
+              </div>
+              <div class="col-6">
+                    <p class="text-right">0</p>
+              </div>
+              </div>
+        
+              <div class="row">
+                <div class="col-6">
+                  <p style="margin-left:20px;""> Missing pct </p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right">0.00%</p>
+                </div>
+                </div>
+                
+          <div class="row">
+              <div class="col-6">
+                <p style="margin-left:20px;""> Unique count </p>
+              </div>
+              <div class="col-6">
+                    <p class="text-right"> 3,489</p>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p style="margin-left:20px;""> Unique pct </p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right"> 17.45%</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="col-6">
+                  <p style="margin-left:20px;""> Unique Domain count </p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right"> 3</p>
+                </div>
+                </div>
+             
+    </div>
+    <div class="col-6">
+        <canvas id="emailChart" width="400" height="300"></canvas>
+            <script>
+                var dataFraud = [382, 333, 294];
+                var dataLegit = [6596, 6326, 6069];
+                var datalabel = ['example.net', 'example.com', 'example.org']
+                
+                var bar_ctx = document.getElementById("emailChart");
+                var bar_chart = new Chart(bar_ctx, {
+                type: 'horizontalBar',
+                data: {
+                    labels: datalabel,
+                    datasets: [{
+                        
+                        data: dataFraud,
+                        backgroundColor: "#689B0C",
+                        hoverBackgroundColor: "#D4E4B4",
+                        hoverBorderWidth: 1
+                    },
+                    {
+                        
+                        data: dataLegit,
+                        backgroundColor: "#1975BA ",
+                        hoverBackgroundColor: "#B5D3EA",
+                        hoverBorderWidth: 1
+                    }
+                    ]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Top 10 Email Domains'
+                        },
+                    legend: {
+                            display: false
+                    },
+                    animation: {
+                    duration: 10,
+                    },
+                    scales: {
+                    xAxes: [{
+                        stacked: true,
+                        gridLines: {
+                        display: false
+                        },
+                    }],
+                    yAxes: [{
+                        stacked: true,
+                        ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1
+                        },
+                    }],
+                    },
+                    
+                },
+                });
+            </script>
+    </div>
+    </div>
+</div>
+
+
+</div>
+
+
+    
+<div class="container"> 
+  <h4>IP Address Analysis</h4>
+  <hr>
+    <div class="alert alert-info">
+        AWS Fraud Detector performs the following checks on IP Addresses:
+        <li> IP is in IPv4 format ex: 192.0.2.235  </li>
+        <li> IP contains less than 20% missing values  </li>
+        <li> IP contains more than 100 unique ip addresses </li>
+    </div>
+    <div class="container">
+    	<div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-6">
+                  <p>IP Field</p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right"><b> ip_address</b></p>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                      <p style="margin-left:20px;"">Record count</p>
+                    </div>
+                    <div class="col-6">
+                          <p class="text-right">20,000</p>
+                    </div>
+                    </div>
+                <div class="row">
+                    <div class="col-6">
+                      <p style="margin-left:20px;"">Valid count</p>
+                    </div>
+                    <div class="col-6">
+                          <p class="text-right">20,000</p>
+                    </div>
+                    </div>
+                
+
+        <div class="row">
+                <div class="col-6">
+            <p style="margin-left:20px;"">Invalid count</p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right">0</p>
+        </div>
+          </div>
+          <div class="row">
+              <div class="col-6">
+                <p style="margin-left:20px;"">Missing count </p>
+              </div>
+              <div class="col-6">
+                    <p class="text-right">0</p>
+              </div>
+              </div>
+          <div class="row">
+                <div class="col-6">
+                  <p style="margin-left:20px;""> Missing pct  </p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right">0.00 %</p>
+                </div>
+                </div>
+          <div class="row">
+              <div class="col-6">
+                <p style="margin-left:20px;""> Unique count </p>
+              </div>
+              <div class="col-6">
+                    <p class="text-right"> 3,021</p>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p style="margin-left:20px;"">  Unique pct </p>
+                </div>
+                <div class="col-6">
+                      <p class="text-right"> 15.10%</p>
+                </div>
+                </div>
+             
+    </div>
+    <div class="col-6">
+        <canvas id="ipChart" width="400" height="300"></canvas>
+            <script>
+                var dataFraud = [1, 2, 3, 0, 0, 0, 2, 0, 1, 1];
+                var dataLegit = [26, 23, 20, 22, 22, 22, 20, 21, 20, 20];
+                var datalabel = ['34.63.50.212', '31.246.27.93', '40.215.172.155', '140.165.97.186', '214.18.53.39', '172.37.252.134', '187.145.221.242', '198.110.108.226', '79.0.19.128', '103.201.255.109']
+                
+                var bar_ctx = document.getElementById("ipChart");
+                var bar_chart = new Chart(bar_ctx, {
+                type: 'horizontalBar',
+                data: {
+                    labels: datalabel,
+                    datasets: [{
+                        label: 'Fraud',
+                        data: dataFraud,
+                        backgroundColor: "#689B0C",
+                        hoverBackgroundColor: "#D4E4B4",
+                        hoverBorderWidth: 1
+                    },
+                    {
+                        label: 'Not-Fraud',
+                        data: dataLegit,
+                        backgroundColor: "#1975BA ",
+                        hoverBackgroundColor: "#B5D3EA",
+                        hoverBorderWidth: 1
+                    }
+                    ]
+                },
+                options: {
+                    animation: {
+                    duration: 10,
+                    },
+                    scales: {
+                    xAxes: [{
+                        stacked: true,
+                        gridLines: {
+                        display: false
+                        },
+                    }],
+                    yAxes: [{
+                        stacked: true,
+                        ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1
+                        },
+                    }],
+                    },
+                    legend: {
+                    display: false
+                    }
+                },
+                });
+            </script>
+    </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+    
+<br>
+<div class="container"> 
+    <h4>Categorical Analysis</h4>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Count</th>
+        <th scope="col"># Distinct</th>
+        <th scope="col">% Distinct</th>
+        <th scope="col"># Missing</th>
+        <th scope="col">% Missing</th>
+    
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>billing_state</b></td>
+          <td>object</td>
+          <td>20000</td>
+          <td>46</td>
+          <td>            0.23%</td>
+          <td>0</td>
+          <td>            0.00%</td>
+        </tr>
+      </tbody>
+  </table>
+  <div class="row">
+  <div class="col-6">
+  <canvas id="billing_state" width="400" height="300"></canvas>
+  <script>
+  var dataPack1 = [0.8806, 0.8298, 0.8125, 0.7669, 0.5962, 0.3937, 0.365, 0.1842, 0.1123, 0.088];
+  var dataPack2 = [0.1194, 0.1702, 0.1875, 0.2331, 0.4038, 0.6063, 0.635, 0.8158, 0.8877, 0.912];
+  var datalabel = ['NJ', 'KS', 'AZ', 'GA', 'UT', 'ME', 'AR', 'MD', 'WA', 'NY'];
+    var bar_ctx = document.getElementById("billing_state");
+    var bar_chart = new Chart(bar_ctx, {
+      type: 'horizontalBar',
+      data: {
+        labels: datalabel,
+        datasets: [{
+            label: 'Fraud',
+            data: dataPack1,
+            backgroundColor: "#689B0C",
+            hoverBackgroundColor: "#D4E4B4",
+            hoverBorderWidth: 1
+          },
+          {
+            label: 'Not-Fraud',
+            data: dataPack2,
+            backgroundColor: "#1975BA ",
+            hoverBackgroundColor: "#B5D3EA",
+            hoverBorderWidth: 1
+          }
+        ]
+      },
+      options: {
+        animation: {
+          duration: 10,
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            gridLines: {
+              display: false
+            },
+          }],
+          yAxes: [{
+            stacked: true,
+            ticks: {
+              suggestedMin: 0,
+              suggestedMax: 1
+            },
+          }],
+        },
+        legend: {
+          display: true
+        }
+      },
+    });
+
+ 
+  </script>
+  </div>
+  <div class="col-6">
+    <canvas id="billing_state_1" width="400" height="300"></canvas>
+    <script>
+    var dataPack1 = [67, 94, 112, 133, 156, 221, 263, 380, 463, 648];
+    var datalabel = ['NJ', 'KS', 'AZ', 'GA', 'UT', 'ME', 'AR', 'MD', 'WA', 'NY'];
+      var bar_ctx = document.getElementById("billing_state_1");
+      var bar_chart = new Chart(bar_ctx, {
+        type: 'horizontalBar',
+        data: {
+          labels: datalabel,
+          datasets: [{
+              label: 'FREQ',
+              data: dataPack1,
+              backgroundColor: "#1975BA",
+              hoverBackgroundColor: "#B5D3EA",
+              hoverBorderWidth: 0
+            },
+          ]
+        },
+        options: {
+          animation: {
+            duration: 10,
+          },
+          scales: {
+            xAxes: [{
+              stacked: true,
+              gridLines: {
+                display: false
+              },
+            }],
+            yAxes: [{
+              stacked: true,
+              ticks: {
+               
+              },
+            }],
+          },
+          legend: {
+            display: true
+          }
+        },
+      });
+  
+   
+    </script>
+    </div>
+  </div>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Count</th>
+        <th scope="col"># Distinct</th>
+        <th scope="col">% Distinct</th>
+        <th scope="col"># Missing</th>
+        <th scope="col">% Missing</th>
+    
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>user_agent</b></td>
+          <td>object</td>
+          <td>20000</td>
+          <td>2981</td>
+          <td>           14.90%</td>
+          <td>0</td>
+          <td>            0.00%</td>
+        </tr>
+      </tbody>
+  </table>
+  <div class="row">
+  <div class="col-6">
+  <canvas id="user_agent" width="400" height="300"></canvas>
+  <script>
+  var dataPack1 = [0.3125, 0.3, 0.3, 0.2727, 0.2143, 0.2143, 0.2, 0.2, 0.1765, 0.1579];
+  var dataPack2 = [0.6875, 0.7, 0.7, 0.7273, 0.7857, 0.7857, 0.8, 0.8, 0.8235, 0.8421];
+  var datalabel = ['Opera/8.12.(Windows CE; kl-GL) Presto/2.9.178 Version/11.00', 'Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; gd-GB) AppleWebKit/532.39.5 (KHTML, like Gecko) Version/3.0.5 Mobile/8B111 Safari/6532.39.5', 'Mozilla/5.0 (Android 7.1; Mobile; rv:66.0) Gecko/66.0 Firefox/66.0', 'Mozilla/5.0 (iPad; CPU iPad OS 6_1_6 like Mac OS X) AppleWebKit/536.1 (KHTML, like Gecko) CriOS/41.0.895.0 Mobile/90C895 Safari/536.1', 'Opera/9.84.(X11; Linux i686; lv-LV) Presto/2.9.168 Version/11.00', 'Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/535.2.6 (KHTML, like Gecko) Version/5.1 Safari/535.2.6', 'Mozilla/5.0 (Windows; U; Windows NT 5.2) AppleWebKit/531.46.4 (KHTML, like Gecko) Version/4.0.2 Safari/531.46.4', 'Opera/8.97.(X11; Linux i686; rw-RW) Presto/2.9.162 Version/11.00', 'Opera/9.68.(X11; Linux x86_64; ru-RU) Presto/2.9.162 Version/11.00', 'Mozilla/5.0 (iPad; CPU iPad OS 7_1_2 like Mac OS X) AppleWebKit/533.0 (KHTML, like Gecko) FxiOS/18.7g4946.0 Mobile/37F603 Safari/533.0'];
+    var bar_ctx = document.getElementById("user_agent");
+    var bar_chart = new Chart(bar_ctx, {
+      type: 'horizontalBar',
+      data: {
+        labels: datalabel,
+        datasets: [{
+            label: 'Fraud',
+            data: dataPack1,
+            backgroundColor: "#689B0C",
+            hoverBackgroundColor: "#D4E4B4",
+            hoverBorderWidth: 1
+          },
+          {
+            label: 'Not-Fraud',
+            data: dataPack2,
+            backgroundColor: "#1975BA ",
+            hoverBackgroundColor: "#B5D3EA",
+            hoverBorderWidth: 1
+          }
+        ]
+      },
+      options: {
+        animation: {
+          duration: 10,
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            gridLines: {
+              display: false
+            },
+          }],
+          yAxes: [{
+            stacked: true,
+            ticks: {
+              suggestedMin: 0,
+              suggestedMax: 1
+            },
+          }],
+        },
+        legend: {
+          display: true
+        }
+      },
+    });
+
+ 
+  </script>
+  </div>
+  <div class="col-6">
+    <canvas id="user_agent_1" width="400" height="300"></canvas>
+    <script>
+    var dataPack1 = [16, 10, 10, 11, 14, 14, 15, 15, 17, 19];
+    var datalabel = ['Opera/8.12.(Windows CE; kl-GL) Presto/2.9.178 Version/11.00', 'Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; gd-GB) AppleWebKit/532.39.5 (KHTML, like Gecko) Version/3.0.5 Mobile/8B111 Safari/6532.39.5', 'Mozilla/5.0 (Android 7.1; Mobile; rv:66.0) Gecko/66.0 Firefox/66.0', 'Mozilla/5.0 (iPad; CPU iPad OS 6_1_6 like Mac OS X) AppleWebKit/536.1 (KHTML, like Gecko) CriOS/41.0.895.0 Mobile/90C895 Safari/536.1', 'Opera/9.84.(X11; Linux i686; lv-LV) Presto/2.9.168 Version/11.00', 'Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/535.2.6 (KHTML, like Gecko) Version/5.1 Safari/535.2.6', 'Mozilla/5.0 (Windows; U; Windows NT 5.2) AppleWebKit/531.46.4 (KHTML, like Gecko) Version/4.0.2 Safari/531.46.4', 'Opera/8.97.(X11; Linux i686; rw-RW) Presto/2.9.162 Version/11.00', 'Opera/9.68.(X11; Linux x86_64; ru-RU) Presto/2.9.162 Version/11.00', 'Mozilla/5.0 (iPad; CPU iPad OS 7_1_2 like Mac OS X) AppleWebKit/533.0 (KHTML, like Gecko) FxiOS/18.7g4946.0 Mobile/37F603 Safari/533.0'];
+      var bar_ctx = document.getElementById("user_agent_1");
+      var bar_chart = new Chart(bar_ctx, {
+        type: 'horizontalBar',
+        data: {
+          labels: datalabel,
+          datasets: [{
+              label: 'FREQ',
+              data: dataPack1,
+              backgroundColor: "#1975BA",
+              hoverBackgroundColor: "#B5D3EA",
+              hoverBorderWidth: 0
+            },
+          ]
+        },
+        options: {
+          animation: {
+            duration: 10,
+          },
+          scales: {
+            xAxes: [{
+              stacked: true,
+              gridLines: {
+                display: false
+              },
+            }],
+            yAxes: [{
+              stacked: true,
+              ticks: {
+               
+              },
+            }],
+          },
+          legend: {
+            display: true
+          }
+        },
+      });
+  
+   
+    </script>
+    </div>
+  </div>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Count</th>
+        <th scope="col"># Distinct</th>
+        <th scope="col">% Distinct</th>
+        <th scope="col"># Missing</th>
+        <th scope="col">% Missing</th>
+    
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>phone_number</b></td>
+          <td>object</td>
+          <td>20000</td>
+          <td>3504</td>
+          <td>           17.52%</td>
+          <td>0</td>
+          <td>            0.00%</td>
+        </tr>
+      </tbody>
+  </table>
+  <div class="row">
+  <div class="col-6">
+  <canvas id="phone_number" width="400" height="300"></canvas>
+  <script>
+  var dataPack1 = [0.5, 0.5, 0.4444, 0.4, 0.4, 0.4, 0.3333, 0.2941, 0.2667, 0.2105];
+  var dataPack2 = [0.5, 0.5, 0.5556, 0.6, 0.6, 0.6, 0.6667, 0.7059, 0.7333, 0.7895];
+  var datalabel = ['(555)192 - 2565', '(555)508 - 3158', '(555)604 - 3893', '(555)651 - 5806', '(555)997 - 1670', '(555)716 - 2954', '(555)962 - 8823', '(555)284 - 9565', '(555)132 - 6125', '(555)413 - 6132'];
+    var bar_ctx = document.getElementById("phone_number");
+    var bar_chart = new Chart(bar_ctx, {
+      type: 'horizontalBar',
+      data: {
+        labels: datalabel,
+        datasets: [{
+            label: 'Fraud',
+            data: dataPack1,
+            backgroundColor: "#689B0C",
+            hoverBackgroundColor: "#D4E4B4",
+            hoverBorderWidth: 1
+          },
+          {
+            label: 'Not-Fraud',
+            data: dataPack2,
+            backgroundColor: "#1975BA ",
+            hoverBackgroundColor: "#B5D3EA",
+            hoverBorderWidth: 1
+          }
+        ]
+      },
+      options: {
+        animation: {
+          duration: 10,
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            gridLines: {
+              display: false
+            },
+          }],
+          yAxes: [{
+            stacked: true,
+            ticks: {
+              suggestedMin: 0,
+              suggestedMax: 1
+            },
+          }],
+        },
+        legend: {
+          display: true
+        }
+      },
+    });
+
+ 
+  </script>
+  </div>
+  <div class="col-6">
+    <canvas id="phone_number_1" width="400" height="300"></canvas>
+    <script>
+    var dataPack1 = [12, 8, 9, 15, 10, 10, 12, 17, 15, 19];
+    var datalabel = ['(555)192 - 2565', '(555)508 - 3158', '(555)604 - 3893', '(555)651 - 5806', '(555)997 - 1670', '(555)716 - 2954', '(555)962 - 8823', '(555)284 - 9565', '(555)132 - 6125', '(555)413 - 6132'];
+      var bar_ctx = document.getElementById("phone_number_1");
+      var bar_chart = new Chart(bar_ctx, {
+        type: 'horizontalBar',
+        data: {
+          labels: datalabel,
+          datasets: [{
+              label: 'FREQ',
+              data: dataPack1,
+              backgroundColor: "#1975BA",
+              hoverBackgroundColor: "#B5D3EA",
+              hoverBorderWidth: 0
+            },
+          ]
+        },
+        options: {
+          animation: {
+            duration: 10,
+          },
+          scales: {
+            xAxes: [{
+              stacked: true,
+              gridLines: {
+                display: false
+              },
+            }],
+            yAxes: [{
+              stacked: true,
+              ticks: {
+               
+              },
+            }],
+          },
+          legend: {
+            display: true
+          }
+        },
+      });
+  
+   
+    </script>
+    </div>
+  </div>
+
+
+
+    
+<br>
+<div class="container"> 
+<h2>Numeric Variables  </h2>
+<br>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Count</th>
+        <th scope="col"># Distinct</th>
+        <th scope="col">% Distinct</th>
+        <th scope="col"># Missing</th>
+        <th scope="col">% Missing</th>
+        <th scope="col">Mean</th>
+        <th scope="col">Min</th>
+        <th scope="col">Max</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>billing_postal</b></td>
+        <td>int64</td>
+        <td>20000</td>
+        <td>1543</td>
+        <td>            7.72%</td>
+        <td>0</td>
+        <td>            0.00%</td>
+        <td>33472.1544</td>
+        <td>32004.0</td>
+        <td>34995.0</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <canvas id="billing_postal" width="600" height="200"></canvas>
+      <div class="row">
+        <div class="col-6">
+          <script>
+          var options = {
+            type: 'bar',
+            data: {
+              labels: ['(32003.999, 32142.0]', '(32142.0, 32251.0]', '(32251.0, 32397.0]', '(32397.0, 32517.0]', '(32517.0, 32622.0]', '(32622.0, 32738.0]', '(32738.0, 32883.0]', '(32883.0, 33024.0]', '(33024.0, 33132.0]', '(33132.0, 33258.0]', '(33258.0, 33418.0]', '(33418.0, 33550.0]', '(33550.0, 33658.0]', '(33658.0, 33767.0]', '(33767.0, 33898.0]', '(33898.0, 34058.0]', '(34058.0, 34185.0]', '(34185.0, 34320.0]', '(34320.0, 34449.0]', '(34449.0, 34581.0]', '(34581.0, 34690.0]', '(34690.0, 34809.0]', '(34809.0, 34995.0]'],
+              datasets: [{
+                  label: 'Fraud',
+                  data: [38, 36, 51, 38, 37, 33, 46, 62, 37, 41, 60, 47, 41, 31, 39, 58, 36, 28, 52, 64, 46, 41, 47],
+                  borderWidth: 1,
+                  backgroundColor: "#689B0C",
+                  hoverBackgroundColor: "#D4E4B4",
+                },
+                {
+                  label: 'Legit',
+                  backgroundColor: "#1975BA",
+                  hoverBackgroundColor: "#B5D3EA",
+                  data: [860, 814, 813, 839, 831, 852, 831, 781, 840, 829, 817, 807, 824, 866, 830, 790, 828, 851, 812, 824, 809, 844, 799],
+                  borderWidth: 1
+                }
+              ]
+            },
+            options: {
+              scales: {
+                xAxes: [{ 
+                stacked: true, 
+                gridLines: { display: false },
+                }],
+                yAxes: [{
+                  ticks: {
+                    reverse: false
+                  }
+                }]
+              }
+            }
+          }
+          var ctx = document.getElementById("billing_postal").getContext('2d');
+          new Chart(ctx, options);
+        </script>
+        </div>
+      </div>
+
+
+
+
+
+
+
+ 
+
+</body>
